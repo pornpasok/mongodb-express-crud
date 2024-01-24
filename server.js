@@ -20,12 +20,30 @@ const cors = require('cors')
 const app = express()
 const port = 3000
 
+const path = require('path');
+const router = express.Router();
+
 app.use(cors())
 app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
+// app.get('/', (req, res) => {
+//     res.send('Hello World!')
+// })
+
+router.get('/',function(req,res){
+    res.sendFile(path.join(__dirname+'/index.html'));
+    //__dirname : It will resolve to your project folder.
+});
+   
+router.get('/style.css',function(req,res){
+    res.sendFile(path.join(__dirname+'/style.css'));
+});
+   
+router.get('/script.js',function(req,res){
+    res.sendFile(path.join(__dirname+'/script.js'));
+});
+
+app.use('/', router);
 
 const { MongoClient } = require("mongodb");
 const uri = process.env.MONGODB_URI;
