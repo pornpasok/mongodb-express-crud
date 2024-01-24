@@ -27,6 +27,9 @@ mongodb-express-crud
 
 ```
 
+### Check App
+http://localhost:3000
+
 ![mongodb-express-crud](images/mongodb-express-crud.png)
 
 ### Ref
