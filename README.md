@@ -9,6 +9,7 @@ export ELASTIC_APM_SECRET_TOKEN="XXX"
 export ELASTIC_APM_SERVER_URL="https://XXX.apm.ap-southeast-1.aws.cloud.es.io:443" 
 
 # Usage
+npm install express cors mongodb elastic-apm-node
 node server.js
 ```
 
