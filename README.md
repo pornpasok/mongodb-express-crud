@@ -1,5 +1,6 @@
 # mongodb-express-crud
 
+### Native Nodejs
 ```
 # Export ENV
 export MONGODB_URI="mongodb+srv://XXX:XXX@cluster0.yuxvtce.mongodb.net/?retryWrites=true&w=majority"
@@ -9,6 +10,21 @@ export ELASTIC_APM_SERVER_URL="https://XXX.apm.ap-southeast-1.aws.cloud.es.io:44
 
 # Usage
 node server.js
+```
+
+### Docker
+```
+# Build
+docker build -t mongodb-express-crud .
+
+# Run
+docker run -d -p 3000:3000 \
+-e MONGODB_URI="mongodb+srv://XXX:XXX@cluster0.yuxvtce.mongodb.net/?retryWrites=true&w=majority" \
+-e ELASTIC_APM_SERVICE_NAME="mongodb-express-crud" \
+-e ELASTIC_APM_SECRET_TOKEN="XXX" \
+-e ELASTIC_APM_SERVER_URL="https://XXX.apm.ap-southeast-1.aws.cloud.es.io:443" \
+mongodb-express-crud
+
 ```
 
 ![mongodb-express-crud](images/mongodb-express-crud.png)
