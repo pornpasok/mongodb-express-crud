@@ -1,19 +1,19 @@
 // Add this to the VERY top of the first file loaded in your app
-// const apm = require('elastic-apm-node').start({
-//     // Override service name from package.json
-//     // Allowed characters: a-z, A-Z, 0-9, -, _, and space
-//     serviceName: 'process.env.ELASTIC_APM_SERVICE_NAME',
+const apm = require('elastic-apm-node').start({
+    // Override service name from package.json
+    // Allowed characters: a-z, A-Z, 0-9, -, _, and space
+    serviceName: 'process.env.ELASTIC_APM_SERVICE_NAME',
 
-//     // Use if APM Server requires a token
-//     secretToken: 'process.env.ELASTIC_APM_SECRET_TOKEN',
+    // Use if APM Server requires a token
+    secretToken: 'process.env.ELASTIC_APM_SECRET_TOKEN',
 
-//     // Use if APM Server uses API keys for authentication
-//     apiKey: '',
+    // Use if APM Server uses API keys for authentication
+    apiKey: '',
 
-//     // Set custom APM Server URL (default: http://localhost:8200)
-//     serverUrl: 'process.env.ELASTIC_APM_SERVER_URL',
-//     //environment: 'process.env.ELASTIC_APM_ENV'
-// })
+    // Set custom APM Server URL (default: http://localhost:8200)
+    serverUrl: 'process.env.ELASTIC_APM_SERVER_URL',
+    //environment: 'process.env.ELASTIC_APM_ENV'
+})
 
 const express = require('express')
 const cors = require('cors')
